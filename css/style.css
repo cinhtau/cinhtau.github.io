@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,900&subset=latin-ext');
+
+@keyframes lazy {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  /* Location of the image */
+  background-image: url(../images/bg/joanna-kosinska-mjC9apK53a8-unsplash_yiowao_c_scale,w_3837.jpg);
+
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Makes the image fixed in the viewport so that it doesn't move when
+     the content height is greater than the image height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#ffffff;
+
+  /* SHORTHAND CSS NOTATION
+   * background: url(background-photo.jpg) center center cover no-repeat fixed;
+   */
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 1em;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 -0.1em -0.07em;
+  font-weight: 700;
+  font-size: 8em;
+  #color: rgb(255, 255, 255);
+  padding: 0;
+}
+
+h1 .thin {
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  letter-spacing: 0.2em;
+  font-size: 1.6em;
+  font-weight: 400;
+  #color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+a:hover {
+  border-bottom: solid rgb(255, 255, 255) 0.1em;
+  padding-bottom: 0.2em;
+}
+
+.connect-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4em 0 0 0;
+}
+
+.connect-icon {
+  width: 6.34em
+}
+
+.connect-icon svg {
+  border-radius: 50%;
+  margin: 0 1.6em 0 0;
+  border: solid 0.2em;
+  padding: 1em;
+  height: 2em;
+  width: 2em;
+}
+
+.connect-icon svg:hover {
+  padding: 0.6em;
+  height: 2.8em;
+  width: 2.8em;
+}
+
+.connect-icon #codepen svg {
+  padding: 0.9em;
+  height: 2.2em;
+  width: 2.2em;
+}
+
+.connect-icon #codepen svg:hover {
+  padding: 0.45em;
+  height: 3.1em;
+  width: 3.1em;
+}
+
+.connect-icon a:hover {
+  border-bottom: none;
+}
+
+#twitter svg {
+  fill: rgb(29, 161, 242);
+  color: rgb(29, 161, 242);
+}
+
+#linkedin svg {
+  fill: rgb(40,103,178);
+  color: rgb(40,103,178);
+}
+
+#email svg {
+  fill: rgb(66,133,244);
+  color: rgb(66,133,244);
+}
+
+.tooltip {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip .tooltiptext {
+  position: absolute;
+  visibility: hidden;
+  border: 0.1em solid rgb(255, 255, 255);
+  font-family: 'Roboto Slab', serif;
+  background-color: #000011;
+  color: rgb(255, 255, 255);
+  margin: 0 0 0 -7.4em;
+  text-align: center;
+  font-weight: 400;
+  padding: 0.5em;
+  width: 6em;
+  z-index: 1;
+  top: 6em;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+  position: absolute;
+  border-color: transparent transparent rgb(255, 255, 255) transparent;
+  margin-left: -0.5em;
+  border-width: 0.5em;
+  border-style: solid;
+  content: "";
+  bottom: 100%;
+  left: 50%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+footer {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  bottom: 0;
+  right: 0;
+}
+
+footer p {
+  margin: 2em;
+  padding: 0;
+  color: #000000;
+}
+
+footer span:hover {
+  border-bottom: solid rgb(255, 255, 255) 0.1em;
+  color: rgb(185, 185, 185);
+  padding-bottom: 0.2em;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.animate-opacity {
+  animation: fade 0.8s
+}
+
+@keyframes fade {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.animate-show {
+  animation: show 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+
+@media only screen
+  and (min-width: 992px)
+  and (max-width: 1199px) {
+
+  body { background-image: url(../images/bg/joanna-kosinska-mjC9apK53a8-unsplash_yiowao_ar_16_9,c_fill,g_auto__c_scale,w_1299.jpg); }
+}
+
+
+@media only screen
+  and (min-width: 767px)
+  and (max-width: 991px) {
+
+  body { background-image: url(../images/bg/joanna-kosinska-mjC9apK53a8-unsplash_yiowao_ar_4_3,c_fill,g_auto__c_scale,w_1149.jpg); }
+}
+
+@media only screen
+  and (min-width: 320px)
+  and (max-width: 767px) {
+
+  body { background-image: url(../images/bg/joanna-kosinska-mjC9apK53a8-unsplash_yiowao_ar_1_1,c_fill,g_auto__c_scale,w_942.jpg); }
+
+  header {
+    margin: 0 0 0 1em;
+  }
+  h1 {
+    font-size: 3.2em;
+  }
+  h2 {
+    font-size: 0.64em;
+  }
+  .connect-icon-container {
+    margin: 6em 0 0 0;
+  }
+  .connect-icon {
+    width: 4em
+  }
+  .connect-icon svg {
+    border: solid 0.2em;
+    padding: 0.5em;
+    height: 2em;
+    width: 2em;
+    margin: 0;
+  }
+  .connect-icon svg:hover {
+    padding: 0.5em;
+    height: 2em;
+    width: 2em;
+  }
+  .connect-icon #codepen svg {
+    padding: 0.4em;
+    height: 2.2em;
+    width: 2.2em;
+  }
+  .connect-icon #codepen svg:hover {
+    padding: 0.4em;
+    height: 2.2em;
+    width: 2.2em;
+  }
+  .tooltip:hover .tooltiptext {
+    display: none;
+  }
+  footer {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+  }
+  footer p {
+    margin: 1em;
+    padding: 0;
+  }
+}
+
+@media (max-width: 440px) {
+
+  body { background-image: url(../images/bg/joanna-kosinska-mjC9apK53a8-unsplash_yiowao_ar_1_1,c_fill,g_auto__c_scale,w_680.jpg); }
+
+  header {
+    margin: 0;
+  }
+  h1 {
+    font-size: 2.25em;
+  }
+  h2 {
+    font-size: 0.45em;
+  }
+  .connect-icon-container {
+    margin: 3em 0 0 0;
+  }
+  .connect-icon {
+    width: 2.8em
+  }
+  .connect-icon svg {
+    padding: 0.2em;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .connect-icon svg:hover {
+    padding: 0.2em;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .connect-icon #codepen svg {
+    padding: 0.16em;
+    height: 1.71em;
+    width: 1.71em;
+  }
+  .connect-icon #codepen svg:hover {
+    padding: 0.16em;
+    height: 1.71em;
+    width: 1.71em;
+  }
+  footer p {
+    font-size: 0.8em;
+  }
+
+}
+
+@media (max-height: 450px) {
+  header {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 2.25em;
+  }
+  h2 {
+    font-size: 0.45em;
+  }
+  .connect-icon-container {
+    margin: 0.5em 0 0 0;
+  }
+  .connect-icon {
+    width: 2.8em
+  }
+  .connect-icon svg {
+    padding: 0.2em;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .connect-icon svg:hover {
+    padding: 0.2em;
+    height: 1.6em;
+    width: 1.6em;
+  }
+  .connect-icon #codepen svg {
+    padding: 0.16em;
+    height: 1.71em;
+    width: 1.71em;
+  }
+  .connect-icon #codepen svg:hover {
+    padding: 0.16em;
+    height: 1.71em;
+    width: 1.71em;
+  }
+  .tooltip:hover .tooltiptext {
+    display: none;
+  }
+  footer p {
+    margin: 0 1em 1em 0;
+    padding: 0;
+  }
+  footer p {
+    font-size: 0.8em;
+  }
+}
